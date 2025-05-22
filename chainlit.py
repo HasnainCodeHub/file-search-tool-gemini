@@ -40,7 +40,7 @@ set_default_openai_client(external_client)
 # Initialize Pinecone
 pc = Pinecone(api_key=pinecone_api_key)
 index_name = 'zia-pdf-index'
-namespace = 'default'
+namespace = 'ns1'
 
 # Create or connect to Pinecone index
 if index_name not in [index['name'] for index in pc.list_indexes().get('indexes', [])]:

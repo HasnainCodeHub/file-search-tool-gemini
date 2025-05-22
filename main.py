@@ -92,7 +92,7 @@ try:
     pc = initialize_pinecone(PINECONE_API_KEY)
 
     # Define the index name
-    index_name = 'zia-pdf-index'
+    index_name = 'hasnain-pdf-index'
 
 
     # Check if the index exists, create if not
@@ -189,7 +189,7 @@ async def main(file_path):
     index.upsert(vectors=data, namespace='default')
 
     # Step 7: Define the question
-    question = "What Job Hasnain Can Do?"
+    question = "What Job Hasnain Ali Can Do?"
 
     # Step 8: Create an embedding for the question
     print("Searching for relevant information...")
@@ -242,5 +242,5 @@ async def main(file_path):
 # Run the program
 if __name__ == "__main__":
     # Set the path to your PDF file
-    file_path = 'Profile.pdf'  # Change this to your PDF's path
+    file_path = 'data.pdf'  # Change this to your PDF's path
     asyncio.run(main(file_path))
